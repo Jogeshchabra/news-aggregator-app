@@ -1,5 +1,6 @@
 const Path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -18,6 +19,7 @@ module.exports = {
     }
   },
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       { from: Path.resolve(__dirname, '../public'), to: 'public' }
@@ -46,7 +48,7 @@ module.exports = {
             name: '[path][name].[ext]'
           }
         }
-      },
+      }
     ]
   }
 };
