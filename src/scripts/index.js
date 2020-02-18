@@ -21,7 +21,7 @@ let totalResults = 0;
 let state = 'h';
 const headlinesFilter = {
   page: 1,
-  pageSize: 15,
+  pageSize: 20,
   q: ''
 };
 let theme;
